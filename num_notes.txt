@@ -1,0 +1,71 @@
+// game idea for num
+
+
+> 1 lvl:
+    4 digits - 1 sec.
+
+> 2 lvl:
+    9 digits - 1 sec.
+
+> 3 lvl:
+    9 digits - 0.5sec.
+
+
+
+Field matrix 6x6, filled with digits, flashes for a second,
+      then it replaces the fieds with digits with empty boxes.
+
+Points are gained when you click the empty boxes in order.
+
+You lose the game if you don't click the right box.
+
+
+CHOOSE LEVELS
+
+
+
+
+DRAW MATRIX
+
+As the rect gets drawn, it is added a value.
+
+   DRAW RECT
+
+   Every rect is drawn separately.
+   It's position is changed accordingly.
+   The position together with the value of the rect is stored in a dictionary.
+   The value is either a digit or ---nothing---.
+
+   RANDOM VALUE
+
+   Every rect either has value or it is empty inside. (RANDOM)
+   The value is picked from an "array" of digits,
+       that before each game is randomized.
+
+CLICK
+
+Each click is counted.
+
+IF click != value_of_rect:    end_game()
+
+   VALUE OF RECT
+
+   Mouse clicks on position (x,y).
+   Check if this pos in the dictionary has equal value as the clicks counter.
+
+   	 POSITION OF MOUSE
+
+	 Convert the pos into a value that is stored as a key in the dictionary.
+
+POINTS
+
+10 games, se presmetuva vo procenti uspehot.
+   ( sum_points_per_game / max_points*10 )
+
+
+
+
+
+// could be nice if
+
+The window is resizable.
