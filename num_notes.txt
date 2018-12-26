@@ -12,7 +12,7 @@
 
 
 
-Field matrix 6x6, filled with digits, flashes for a second,
+Field matrix 5x5, filled with digits, flashes for a second,
       then it replaces the fieds with digits with empty boxes.
 
 Points are gained when you click the empty boxes in order.
