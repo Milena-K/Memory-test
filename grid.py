@@ -11,7 +11,7 @@ class Grid:
         self.color = color
         self.screen_size = screen_size
         
-    def draw(self):
+    def create(self):
         values = []
         for i in range(self.order**2):
             if i < 10:
@@ -20,8 +20,7 @@ class Grid:
                 values.append(0)
                 
         random.shuffle(values)
-        
-        
+
         for i in range(self.order):
             for j in range(self.order):
                 self.boxes.append(Box(self.surface, self.color, (i*self.screen_size[0]/self.order, j*self.screen_size[1]/self.order, self.screen_size[0]/self.order, self.screen_size[1]/self.order), values[0]))
@@ -29,3 +28,7 @@ class Grid:
                     
     def get_boxes(self):
         return self.boxes
+
+    def draw(self):
+        for box in self.boxes:
+            box.draw()
